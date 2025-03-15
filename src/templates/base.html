@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Map - Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        /* Header Styling */
+        .header {
+            background-color: #FFFFFF;
+            color: #000000;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #D3D3D3;
+        }
+        .profile {
+            display: flex;
+            align-items: center;
+        }
+        .profile img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .logo img {
+            width: 150px;
+        }
+        /* Search Bar */
+        .search-bar {
+            margin: 20px auto;
+            width: 50%;
+            border: 1px solid #D3D3D3;
+            border-radius: 5px;
+        }
+        /* Feature Buttons in Grid */
+        .feature-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            justify-content: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-container {
+            background: #9ecdd9;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: #aca4a5;
+        }
+        .feature-buttons .btn {
+            background: #CFE2F3;
+            color: #000000;
+            width: 100%;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .feature-buttons .btn:hover {
+            background: #9ecdd9;
+        }
+        /* Footer Styling */
+        .footer {
+            background-color: #FFFFFF;
+            color: #000000;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+            border-top: 2px solid #D3D3D3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="profile">
+            <img src="https://via.placeholder.com/50" alt="Profile Picture">
+            <span>{{ user.username }}</span>
+        </div>
+        <div class="logo">
+            <img src="/static/images/CareerMapLogo-TP.png" alt="Career Map Logo">
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container text-center mt-4">
+        <h1>Welcome, {{ user.first_name }}!</h1>
+        <input type="text" class="form-control search-bar" placeholder="Search">
+        
+        <div class="feature-buttons">
+            <div class="btn-container"><button class="btn btn-lg">Chats</button></div>
+            <div class="btn-container"><button class="btn btn-lg">Chatbot</button></div>
+            <div class="btn-container"><button class="btn btn-lg">CV Builder</button></div>
+            <div class="btn-container"><button class="btn btn-lg">Job Listing</button></div>
+            <div class="btn-container"><button class="btn btn-lg">Courses</button></div>
+            <div class="btn-container"><button class="btn btn-lg" onclick="location.href='Demogrphics.html'">Demographics</button></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Career Map. All rights reserved.</p>
+    </div>
+</body>
+</html>
